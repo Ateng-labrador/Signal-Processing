@@ -11,7 +11,7 @@ N = 1024
 
 t = np.arange(N) / fs
 
-x = A * np.sin(2 * np.pi * f * t)
+x = A * np.sin(2 * np.pi * f * t) 
 freq = np.arange(N) * fs / N
 
 fftredix2 = fft.fft(x)
