@@ -16,7 +16,7 @@ fast_fourier = fft(data_bersih)
 
 
 N = 512
-fs = 512
+fs = samplerate
 t = np.arange(N) / fs
 freq = np.arange(N) * fs / N
 

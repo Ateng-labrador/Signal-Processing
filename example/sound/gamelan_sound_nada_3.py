@@ -11,7 +11,7 @@ data_2 = data_1[0:215]
 fast_fourier = fft.bluestein(data_2)
 
 N = 215
-fs = 215
+fs = samplerate
 t = np.arange(N) / fs
 freq = np.arange(N) * fs / N
 
