@@ -1,4 +1,4 @@
-# ProjectFourier - Fast Fourier Transform & Image Compression
+# ProjectFourier - Fast Fourier Transform 
 
 ProjectFourier is implementation of various Fast Fourier Transform (FFT)algorithms for signal analysis and 
 image compression.This project provides any implementation from any FFT like Cooley-Tukey 
