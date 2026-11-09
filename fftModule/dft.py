@@ -1,5 +1,5 @@
 import cmath
-
+import math
 
 def widlet(N):
     """
@@ -15,9 +15,35 @@ def widlet(N):
     return res
 
 
-def dct(x):
-    pass
-
+def dct(x, type="two", ):
+    res = []
+    if type == "one":
+        for k in range(len(x)):
+            row = 0.0
+            for n in range(len(x)):
+                if n == 0 or n == len(x) - 1:
+                    alpha = 0.5
+                else:
+                    alpha = 1
+                op = (math.pi * k * n / len(x) - 1)
+                row += alpha * x[n] * math.cos(op)
+            res.append(row)
+        return 2 * res
+    elif type == "two":
+        for k in range(len(x)):
+            row = 0.0
+            for n in range(len(x)):
+                op = (math.pi * k * (2 * n + 1) / 2 * len(x))
+                row += x[n] * math.cos(op)
+            res.append(row)
+        return 2 * res
+    elif type == "tree":
+        pass
+    elif type == "four":
+        pass
+    else:
+        return "Error yaa"
+                
 
 def dft(x):
     """
